@@ -1,0 +1,37 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Sasm",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.sasm",
+				"match": "\\b(move|data|text|<=)\\b"
+			},
+			{
+				"name": "string",
+				"match": "\\b(section)\\b"
+			}
+		]
+		},
+		"strings": {
+			"name": "string.quoted.double.sasm",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.sasm",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.sasm"
+}

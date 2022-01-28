@@ -1,0 +1,30 @@
+{
+    "name": "sasm-support",
+    "displayName": "Sasm Support",
+    "description": "This extension is to have sasm (a programming language that I have created) support in vscode",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "main": "./extension.js",
+    "activationEvents": [
+		"onLanguage:sasm"
+	],
+    "contributes": {
+        "languages": [{
+            "id": "sasm",
+            "aliases": ["Sasm", "sasm"],
+            "extensions": [".sasm"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "sasm",
+            "scopeName": "source.sasm",
+            "patterns": [{ "include": "#expression" }],
+            "path": "./syntaxes/sasm.tmLanguage.json"
+        }]
+    }
+}
