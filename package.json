@@ -3,6 +3,7 @@
     "displayName": "Sasm Support",
     "description": "This extension is to have sasm (a programming language that I have created) support in vscode",
     "version": "0.0.1",
+    "publisher": "VincentBidarddelaNoe",
     "engines": {
         "vscode": "^1.63.0"
     },
