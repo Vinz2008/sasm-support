@@ -17,7 +17,11 @@
 			},
 			{
 				"name": "string",
-				"match": "\\b(section)\\b"
+				"match": "\\b(section|start)\\b"
+			},
+			{
+				"name": "comment",
+				"match": "\\#([\\s\\S]*)$\\b"
 			}
 		]
 		},
