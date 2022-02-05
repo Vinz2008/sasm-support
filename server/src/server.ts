@@ -186,12 +186,12 @@ connection.onDidChangeWatchedFiles(_change => {
       // info and always provide the same completion items.
       return [
         {
-          label: 'Sasm',
+          label: 'move',
           kind: CompletionItemKind.Text,
           data: 1
         },
         {
-          label: 'JavaScript',
+          label: 'launch',
           kind: CompletionItemKind.Text,
           data: 2
         }
@@ -205,11 +205,11 @@ connection.onDidChangeWatchedFiles(_change => {
 connection.onCompletionResolve(
     (item: CompletionItem): CompletionItem => {
       if (item.data === 1) {
-        item.detail = 'TypeScript details';
-        item.documentation = 'TypeScript documentation';
+        item.detail = 'Move details';
+        item.documentation = 'Move documentation';
       } else if (item.data === 2) {
-        item.detail = 'JavaScript details';
-        item.documentation = 'JavaScript documentation';
+        item.detail = 'launch details';
+        item.documentation = 'launch documentation';
       }
       return item;
     }
