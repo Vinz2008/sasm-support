@@ -13,7 +13,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.sasm",
-				"match": "\\b(move|data|text|<=|compare|add|and|launch|char|interrupt)\\b"
+				"match": "\\b(move|data|text|<=|compare|add|and|launch|char|twoChar|interrupt)\\b"
 			},
 			{
 				"name": "string",

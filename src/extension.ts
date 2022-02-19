@@ -49,6 +49,10 @@ export function activate(context: vscode.ExtensionContext) {
             const snippetCompletionChar = new vscode.CompletionItem('char');
 			snippetCompletionChar.insertText = new vscode.SnippetString('char');
 			snippetCompletionChar.documentation = new vscode.MarkdownString("Creating a string or a character variable in data section");
+
+			const snippetCompletionTwoChar = new vscode.CompletionItem('twoChar');
+			snippetCompletionTwoChar.insertText = new vscode.SnippetString('twoChar');
+			snippetCompletionTwoChar.documentation = new vscode.MarkdownString("Creating a string or a two character variable in data section");
 			// a completion item that can be accepted by a commit character,
 			// the `commitCharacters`-property is set which means that the completion will
 			// be inserted and then the character will be typed.
@@ -78,6 +82,8 @@ export function activate(context: vscode.ExtensionContext) {
                 snippetCompletionAnd,
                 snippetCompletionLaunch,
                 snippetCompletionInterrupt,
+				snippetCompletionChar,
+				snippetCompletionTwoChar,
                 
 			];
 		}
