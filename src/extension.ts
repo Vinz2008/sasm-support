@@ -53,6 +53,10 @@ export function activate(context: vscode.ExtensionContext) {
 			const snippetCompletionTwoChar = new vscode.CompletionItem('twoChar');
 			snippetCompletionTwoChar.insertText = new vscode.SnippetString('twoChar');
 			snippetCompletionTwoChar.documentation = new vscode.MarkdownString("Creating a string or a two character variable in data section");
+
+			const snippetCompletionAsm = new vscode.CompletionItem('asm');
+			snippetCompletionAsm.insertText = new vscode.SnippetString('asm');
+			snippetCompletionAsm.documentation = new vscode.MarkdownString("using pure assembly in sasm");
 			// a completion item that can be accepted by a commit character,
 			// the `commitCharacters`-property is set which means that the completion will
 			// be inserted and then the character will be typed.
@@ -84,6 +88,7 @@ export function activate(context: vscode.ExtensionContext) {
                 snippetCompletionInterrupt,
 				snippetCompletionChar,
 				snippetCompletionTwoChar,
+				snippetCompletionAsm,
                 
 			];
 		}

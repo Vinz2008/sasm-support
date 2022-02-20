@@ -17,11 +17,15 @@
 			},
 			{
 				"name": "string",
-				"match": "\\b(section|start)\\b"
+				"match": "\\b(section|start|asm)\\b"
 			},
 			{
 				"name": "comment",
 				"match": "\\#([\\s\\S]*)$\\b"
+			},
+			{
+				"name": "comment",
+				"match": "(?<=asm)\\b.*"
 			}
 		]
 		},
