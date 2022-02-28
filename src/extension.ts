@@ -54,6 +54,10 @@ export function activate(context: vscode.ExtensionContext) {
 			snippetCompletionTwoChar.insertText = new vscode.SnippetString('twoChar');
 			snippetCompletionTwoChar.documentation = new vscode.MarkdownString("Creating a string or a two character variable in data section");
 
+			const snippetCompletionFourChar = new vscode.CompletionItem('fourChar');
+			snippetCompletionFourChar.insertText = new vscode.SnippetString('fourChar');
+			snippetCompletionFourChar.documentation = new vscode.MarkdownString("Creating a string or a four character variable in data section");
+
 			const snippetCompletionAsm = new vscode.CompletionItem('asm');
 			snippetCompletionAsm.insertText = new vscode.SnippetString('asm');
 			snippetCompletionAsm.documentation = new vscode.MarkdownString("using pure assembly in sasm");
@@ -89,6 +93,7 @@ export function activate(context: vscode.ExtensionContext) {
 				snippetCompletionChar,
 				snippetCompletionTwoChar,
 				snippetCompletionAsm,
+				snippetCompletionFourChar,
                 
 			];
 		}
