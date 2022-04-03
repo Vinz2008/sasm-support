@@ -20,23 +20,23 @@ export function activate(context: vscode.ExtensionContext) {
 
             const snippetCompletionStart = new vscode.CompletionItem('start');
 			snippetCompletionStart.insertText = new vscode.SnippetString('start');
-			snippetCompletionStart.documentation = new vscode.MarkdownString("Starting start function")
+			snippetCompletionStart.documentation = new vscode.MarkdownString("Starting start function");
 
             const snippetCompletionMove = new vscode.CompletionItem('move');
 			snippetCompletionMove.insertText = new vscode.SnippetString('move');
-			snippetCompletionMove.documentation = new vscode.MarkdownString("Moving a value to a register")
+			snippetCompletionMove.documentation = new vscode.MarkdownString("Moving a value to a register");
 
             const snippetCompletionCompare = new vscode.CompletionItem('compare');
 			snippetCompletionCompare.insertText = new vscode.SnippetString('compare');
-			snippetCompletionCompare.documentation = new vscode.MarkdownString("Comparing two things ")
+			snippetCompletionCompare.documentation = new vscode.MarkdownString("Comparing two things ");
 
             const snippetCompletionAdd = new vscode.CompletionItem('add');
 			snippetCompletionAdd.insertText = new vscode.SnippetString('add');
-			snippetCompletionAdd.documentation = new vscode.MarkdownString("Adding two things")
+			snippetCompletionAdd.documentation = new vscode.MarkdownString("Adding two things");
 
             const snippetCompletionAnd = new vscode.CompletionItem('and');
 			snippetCompletionAnd.insertText = new vscode.SnippetString('and');
-			snippetCompletionAnd.documentation = new vscode.MarkdownString("And logic gate : takes two thing , if binary char (0 or 1) in the two things is 1, return 1 for this char else return 0, so you have at the end a binary number. Ex : 0101 and 0011 -> 0001 ")
+			snippetCompletionAnd.documentation = new vscode.MarkdownString("And logic gate : takes two thing , if binary char (0 or 1) in the two things is 1, return 1 for this char else return 0, so you have at the end a binary number. Ex : 0101 and 0011 -> 0001 ");
 
             const snippetCompletionLaunch = new vscode.CompletionItem('launch');
 			snippetCompletionLaunch.insertText = new vscode.SnippetString('launch');
