@@ -61,6 +61,18 @@ export function activate(context: vscode.ExtensionContext) {
 			const snippetCompletionAsm = new vscode.CompletionItem('asm');
 			snippetCompletionAsm.insertText = new vscode.SnippetString('asm');
 			snippetCompletionAsm.documentation = new vscode.MarkdownString("using pure assembly in sasm");
+
+			const snippetCompletionReturn = new vscode.CompletionItem('return');
+			snippetCompletionReturn.insertText = new vscode.SnippetString('return');
+			snippetCompletionReturn.documentation = new vscode.MarkdownString("return to the code running before the launch of the function");
+
+			const snippetCompletionDoNothing = new vscode.CompletionItem('do-nothing');
+			snippetCompletionDoNothing.insertText = new vscode.SnippetString('do-nothing');
+			snippetCompletionDoNothing.documentation = new vscode.MarkdownString("do nothing (but the instrcuction count in the eip register will be impacted)");
+
+			const snippetCompletionMultiply = new vscode.CompletionItem('multiply');
+			snippetCompletionMultiply.insertText = new vscode.SnippetString('multiply');
+			snippetCompletionMultiply.documentation = new vscode.MarkdownString("multiply a number with the number in eax");
 			// a completion item that can be accepted by a commit character,
 			// the `commitCharacters`-property is set which means that the completion will
 			// be inserted and then the character will be typed.
@@ -72,17 +84,17 @@ export function activate(context: vscode.ExtensionContext) {
 			// the `command`-property is set which the editor will execute after 
 			// completion has been inserted. Also, the `insertText` is set so that 
 			// a space is inserted after `new`
-			const commandCompletion = new vscode.CompletionItem('new');
+			/*const commandCompletion = new vscode.CompletionItem('new');
 			commandCompletion.kind = vscode.CompletionItemKind.Keyword;
 			commandCompletion.insertText = 'new ';
-			commandCompletion.command = { command: 'editor.action.triggerSuggest', title: 'Re-trigger completions...' };
+			commandCompletion.command = { command: 'editor.action.triggerSuggest', title: 'Re-trigger completions...' };*/
 
 			// return all completion items as array
 			return [
 				simpleCompletion,
 				snippetCompletion,
 				commitCharacterCompletion,
-				commandCompletion,
+				//commandCompletion,
                 snippetCompletionStart,
                 snippetCompletionMove,
                 snippetCompletionCompare,
@@ -94,6 +106,9 @@ export function activate(context: vscode.ExtensionContext) {
 				snippetCompletionTwoChar,
 				snippetCompletionAsm,
 				snippetCompletionFourChar,
+				snippetCompletionReturn,
+				snippetCompletionDoNothing,
+				snippetCompletionMultiply,
                 
 			];
 		}
