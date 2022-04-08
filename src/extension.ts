@@ -73,6 +73,14 @@ export function activate(context: vscode.ExtensionContext) {
 			const snippetCompletionMultiply = new vscode.CompletionItem('multiply');
 			snippetCompletionMultiply.insertText = new vscode.SnippetString('multiply');
 			snippetCompletionMultiply.documentation = new vscode.MarkdownString("multiply a number with the number in eax");
+
+			const snippetCompletionPush = new vscode.CompletionItem('push');
+			snippetCompletionPush.insertText = new vscode.SnippetString('push');
+			snippetCompletionPush.documentation = new vscode.MarkdownString("push a register to the stack");
+
+			const snippetCompletionPop = new vscode.CompletionItem('pop');
+			snippetCompletionPop.insertText = new vscode.SnippetString('pop');
+			snippetCompletionPop.documentation = new vscode.MarkdownString("restore register from the stack");
 			// a completion item that can be accepted by a commit character,
 			// the `commitCharacters`-property is set which means that the completion will
 			// be inserted and then the character will be typed.
@@ -109,6 +117,9 @@ export function activate(context: vscode.ExtensionContext) {
 				snippetCompletionReturn,
 				snippetCompletionDoNothing,
 				snippetCompletionMultiply,
+				snippetCompletionPush,
+				snippetCompletionPop,
+
                 
 			];
 		}
