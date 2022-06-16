@@ -81,6 +81,22 @@ export function activate(context: vscode.ExtensionContext) {
 			const snippetCompletionPop = new vscode.CompletionItem('pop');
 			snippetCompletionPop.insertText = new vscode.SnippetString('pop');
 			snippetCompletionPop.documentation = new vscode.MarkdownString("restore register from the stack");
+
+			const snippetCompletionCFunction = new vscode.CompletionItem('c-function');
+			snippetCompletionCFunction.insertText = new vscode.SnippetString('c-function');
+			snippetCompletionCFunction.documentation = new vscode.MarkdownString("declare c function to use it in sasm");
+
+			const snippetCompletionGlobalFunction = new vscode.CompletionItem('global-function');
+			snippetCompletionGlobalFunction.insertText = new vscode.SnippetString('global-function');
+			snippetCompletionGlobalFunction.documentation = new vscode.MarkdownString("declare a global function to use it in sasm");
+
+			const snippetCompletionTest = new vscode.CompletionItem('test');
+			snippetCompletionTest.insertText = new vscode.SnippetString('test');
+			snippetCompletionTest.documentation = new vscode.MarkdownString("do an bitwise AND on two things");
+
+			const snippetCompletionJumpZeroFlag = new vscode.CompletionItem('jumpzeroflag');
+			snippetCompletionJumpZeroFlag.insertText = new vscode.SnippetString('jumpzeroflag');
+			snippetCompletionJumpZeroFlag.documentation = new vscode.MarkdownString("jump if ZF is zero (for example after compare)");
 			// a completion item that can be accepted by a commit character,
 			// the `commitCharacters`-property is set which means that the completion will
 			// be inserted and then the character will be typed.
@@ -119,8 +135,10 @@ export function activate(context: vscode.ExtensionContext) {
 				snippetCompletionMultiply,
 				snippetCompletionPush,
 				snippetCompletionPop,
-
-                
+				snippetCompletionCFunction,
+				snippetCompletionGlobalFunction,
+				snippetCompletionTest,
+				snippetCompletionJumpZeroFlag,
 			];
 		}
 	});
