@@ -13,8 +13,8 @@ export function activate(context: vscode.ExtensionContext) {
 			// a completion item that inserts its text as snippet,
 			// the `insertText`-property is a `SnippetString` which will be
 			// honored by the editor.
-			const snippetCompletion = new vscode.CompletionItem('text section');
-			snippetCompletion.insertText = new vscode.SnippetString('text section');
+			const snippetCompletion = new vscode.CompletionItem('code section');
+			snippetCompletion.insertText = new vscode.SnippetString('code section');
 			snippetCompletion.documentation = new vscode.MarkdownString("Section for creating functions or other code.");
 
 
